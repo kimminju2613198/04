@@ -1,16 +1,20 @@
 #include <stdio.h>
 
-int main(int argc, char*argv[]) {
-    int x,y,z,m;
-    int a,b,c;
-    x=2;
-    z=1;
-    a=3;
-    b=4;
-    c=5;
+int main(void) {
+    int a, b;
 
-    y=a*x*x+b*x+c;
-    m=(x+y+z)/3;
+    printf("input two integers : ");
+    scanf("%i %i", &a, &b);
 
-    printf("y=%d, m=%d\n", y, m);
+    //c= a+b;
+    //printf("%i+%i=%i\n",a,b, c);
+    //이렇게 코드 작성도 가능함 대신 int 부분에 int a,b,c; 로 수정 필요
+
+    printf("+ result is %i\n", a + b);
+    printf("- result is %i\n", a - b);
+    printf("* result is %i\n", a * b);
+    printf("/ result is %i\n", a / b);
+    printf("%% result is %i\n", a % b);
+
+    return 0;
 }
