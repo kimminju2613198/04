@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 int main(void) {
-    int sec, min, remain;
+    int year;
+    int is_leap;
 
-    printf("input the second : ");
-    scanf("%i", &sec);
+    printf("input the year : ");
+    scanf("%i", &year);
 
-    min = sec / 60;
-    remain = sec % 60;
+    is_leap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
-    printf("the time is %i : %i\n", min, remain);
-    //변수 지정없이 printf("the time is %i : %i\n",sec / 60, sec % 60) 으로도 가능
+    printf("is the year %i the leap year? : %i\n", year, is_leap);
 
     return 0;
 }
