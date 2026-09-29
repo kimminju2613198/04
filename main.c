@@ -1,20 +1,16 @@
 #include <stdio.h>
 
 int main(void) {
-    int a, b;
+    int sec, min, remain;
 
-    printf("input two integers : ");
-    scanf("%i %i", &a, &b);
+    printf("input the second : ");
+    scanf("%i", &sec);
 
-    //c= a+b;
-    //printf("%i+%i=%i\n",a,b, c);
-    //이렇게 코드 작성도 가능함 대신 int 부분에 int a,b,c; 로 수정 필요
+    min = sec / 60;
+    remain = sec % 60;
 
-    printf("+ result is %i\n", a + b);
-    printf("- result is %i\n", a - b);
-    printf("* result is %i\n", a * b);
-    printf("/ result is %i\n", a / b);
-    printf("%% result is %i\n", a % b);
+    printf("the time is %i : %i\n", min, remain);
+    //변수 지정없이 printf("the time is %i : %i\n",sec / 60, sec % 60) 으로도 가능
 
     return 0;
 }
